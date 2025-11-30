@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novel Reader — WebNovel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar fade">
+  <div class="logo">📚 WebNovel</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="library.html">Library</a>
+    <a href="about.html">About</a>
+    <a href="author.html">Creator</a>
+    <a href="login.html">Login/Register</a>
+  </nav>
+</header>
+
+<div class="reader fade">
+  <h2 id="novelTitle"></h2>
+  <h4 id="chapterTitle"></h4>
+  <textarea id="chapterContent" readonly></textarea>
+
+  <div class="reader-controls">
+    <button onclick="prevChapter()">Prev Chapter</button>
+    <button onclick="nextChapter()">Next Chapter</button>
+    Font Size: <input type="number" id="fontSizeReader" value="16" min="12" max="36">
+    Font Color: <input type="color" id="fontColorReader" value="#ffffff">
+    Word Count: <span id="wordCountReader">0</span>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

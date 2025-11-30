@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Author Panel — WebNovel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar fade">
+  <div class="logo">📚 WebNovel</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="library.html">Library</a>
+    <a href="about.html">About</a>
+    <a href="author.html" class="active">Creator</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
+
+<div class="author-container fade">
+  <h2>Welcome, <span id="authorName"></span></h2>
+
+  <!-- CREATE NEW NOVEL -->
+  <div class="novel-creator">
+    <h3>Create New Novel</h3>
+    <input type="text" id="novelTitle" placeholder="Novel Title">
+    <input type="text" id="novelDesc" placeholder="Short Description">
+    <input type="file" id="novelCoverFile" accept="image/*">
+
+    <button class="btn" onclick="createNovel()">Create Novel</button>
+  </div>
+
+  <div class="chapter-editor fade">
+  <h3>Write / Edit Chapter</h3>
+  <input type="text" id="chapterTitle" placeholder="Chapter Title">
+
+  <!-- Editor toolbar -->
+  <div class="editor-toolbar">
+    <label>Font Size: <input type="number" id="fontSize" min="12" max="36" value="16"></label>
+    <label>Font Color: <input type="color" id="fontColor" value="#ffffff"></label>
+    <button onclick="toggleBold()">B</button>
+    <button onclick="toggleItalic()">I</button>
+  </div>
+
+  <!-- Big typing area -->
+  <textarea id="chapterContent" placeholder="Type your chapter here..." rows="15"></textarea>
+
+  <p>Word Count: <span id="wordCount">0</span></p>
+
+  <button class="btn" onclick="saveChapter()">Save Chapter</button>
+</div>
+
+  <!-- EXISTING NOVELS -->
+  <div class="novel-list">
+    <h3>Your Novels</h3>
+    <div id="novelCards"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

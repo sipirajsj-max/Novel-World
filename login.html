@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login / Register — WebNovel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-container fade">
+
+  <!-- LOGIN FORM -->
+  <div id="login-box">
+    <h2>Author Login</h2>
+    <input type="email" placeholder="Email" id="loginEmail">
+    <input type="password" placeholder="Password" id="loginPwd">
+    <button class="btn" onclick="loginAuthor()">Login</button>
+    <p class="switch">Don't have an account? <span onclick="showRegister()">Register</span></p>
+  </div>
+
+  <!-- REGISTER FORM -->
+  <div id="register-box" style="display:none;">
+    <h2>Register Author</h2>
+    <input type="text" placeholder="Name" id="regName">
+    <input type="email" placeholder="Email" id="regEmail">
+    <input type="password" placeholder="Password" id="regPwd">
+    <input type="password" placeholder="Confirm Password" id="regConfirmPwd">
+    <button class="btn" onclick="registerAuthor()">Register</button>
+    <p class="switch">Already have an account? <span onclick="showLogin()">Login</span></p>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

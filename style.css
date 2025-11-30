@@ -1,0 +1,224 @@
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+body { background:#0d1117; color:#fff; }
+
+/* NAVBAR */
+.navbar {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 40px; background:#161b22; position:sticky; top:0; z-index:1000;
+}
+.navbar .logo { font-size:24px; font-weight:bold; }
+.navbar nav a { margin-left:20px; text-decoration:none; color:#a9b1c3; transition:0.3s; }
+.navbar nav a:hover, .navbar nav a.active { color:#58a6ff; }
+.dark-mode-toggle { cursor:pointer; font-size:20px; }
+
+/* HERO */
+.hero { text-align:center; padding:100px 20px; }
+.hero h1 { font-size:40px; margin-bottom:10px; }
+.hero p { color:#8b98a5; margin-bottom:20px; }
+.btn {
+  background:#238636; padding:12px 25px; border-radius:8px;
+  color:white; text-decoration:none; font-weight:bold; transition:0.3s;
+}
+.btn:hover { background:#2ea043; }
+
+/* FEATURED NOVELS */
+.featured { padding:40px 20px; }
+.featured h2 { margin-bottom:20px; }
+.novel-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;
+}
+.novel-card {
+  background:#161b22; border-radius:12px; overflow:hidden; transition:0.3s;
+}
+.novel-card:hover { transform:translateY(-5px); }
+.novel-card img { width:100%; height:250px; object-fit:cover; }
+.novel-card h3 { padding:10px; font-size:18px; }
+.novel-card p { padding:0 10px 10px; color:#8b98a5; font-size:14px; }
+
+/* GENRES */
+.genres { padding:40px 20px; }
+.genre-grid { display:flex; flex-wrap:wrap; gap:10px; }
+.genre {
+  background:#238636; padding:10px 20px; border-radius:20px; cursor:pointer; transition:0.3s;
+}
+.genre:hover { background:#2ea043; }
+
+/* FADE ANIMATION */
+/* Fade & slide in */
+.fade {
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeIn 0.8s ease-out forwards;
+}
+@keyframes fadeIn {
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* Hover effects for novel cards */
+.novel-card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Buttons hover */
+.btn:hover, .editor-toolbar button:hover {
+  transform:scale(1.05);
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+}
+body {
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0d1117;
+  color:#fff;
+}
+
+.auth-container {
+  max-width:400px;
+  margin:100px auto;
+  background:#161b22;
+  padding:40px;
+  border-radius:12px;
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.auth-container h2 {
+  text-align:center;
+  margin-bottom:20px;
+  color:#58a6ff;
+}
+
+.auth-container input {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
+  background:#0b1020;
+  color:#fff;
+}
+
+.auth-container input:focus {
+  outline:none;
+  border:1px solid #58a6ff;
+}
+
+.auth-container .btn {
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  background:#238636;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.auth-container .btn:hover { background:#2ea043; }
+
+.switch {
+  text-align:center;
+  margin-top:15px;
+  font-size:14px;
+  color:#8b98a5;
+}
+
+.switch span {
+  color:#58a6ff;
+  cursor:pointer;
+}
+
+/* FADE ANIMATION */
+.fade { opacity:0; transform:translateY(20px); animation:fadeIn 0.8s ease-out forwards;}
+@keyframes fadeIn { to{opacity:1; transform:translateY(0);} }
+
+/* MOBILE */
+@media(max-width:500px){
+  .auth-container { margin:50px 20px; padding:30px; }
+}
+.author-container { max-width:900px; margin:50px auto; padding:20px; background:#161b22; border-radius:12px; }
+.author-container h2 { color:#58a6ff; margin-bottom:20px; }
+.novel-creator { margin-bottom:40px; }
+.novel-creator input { width:100%; padding:10px; margin:8px 0; border-radius:8px; border:none; background:#0b1020; color:#fff; }
+.novel-creator button { background:#238636; color:#fff; padding:10px 20px; border:none; border-radius:8px; cursor:pointer; transition:0.3s; }
+.novel-creator button:hover { background:#2ea043; }
+.novel-list h3 { margin-bottom:20px; }
+.novel-card { background:#0f1724; padding:15px; margin-bottom:15px; border-radius:12px; transition:0.3s; }
+.novel-card:hover { transform:translateY(-3px); }
+.novel-card button { margin-top:10px; background:#58a6ff; padding:8px 15px; border:none; border-radius:8px; cursor:pointer; color:#fff; transition:0.3s; }
+.novel-card button:hover { background:#1c7ed6; }
+
+.chapter-editor {
+  background:#161b22;
+  padding:20px;
+  border-radius:12px;
+  margin-top:30px;
+}
+
+.chapter-editor h3 { color:#58a6ff; margin-bottom:10px; }
+
+.editor-toolbar {
+  margin-bottom:10px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.editor-toolbar input[type="number"] { width:60px; padding:5px; border-radius:5px; border:none; }
+.editor-toolbar input[type="color"] { width:40px; height:30px; border:none; cursor:pointer; }
+.editor-toolbar button {
+  padding:5px 10px;
+  background:#238636;
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+.editor-toolbar button:hover { background:#2ea043; }
+
+#chapterContent {
+  width:100%;
+  padding:10px;
+  background:#0b1020;
+  color:#fff;
+  border-radius:10px;
+  border:none;
+  resize:vertical;
+  font-size:16px;
+}
+.novel-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  padding:20px;
+}
+.novel-card {
+  background:#161b22;
+  border-radius:12px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:0.3s;
+}
+.novel-card:hover { transform:translateY(-5px); }
+.novel-card img { width:100%; height:250px; object-fit:cover; }
+.novel-card h3 { padding:10px; font-size:18px; }
+.novel-card p { padding:0 10px 10px; color:#8b98a5; font-size:14px; }
+
+@media(max-width:900px){
+  .novel-grid { grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); }
+  .editor-toolbar { flex-direction:column; align-items:flex-start; gap:8px; }
+}
+@media(max-width:600px){
+  .navbar { flex-direction:column; align-items:flex-start; padding:15px; }
+  .navbar nav { margin-top:10px; display:flex; flex-direction:column; gap:10px; }
+  .hero h1 { font-size:28px; }
+  .chapter-editor textarea { font-size:14px; }
+}
